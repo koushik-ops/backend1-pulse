@@ -24,7 +24,7 @@ print("API FILE EXECUTING")
 app = Flask(__name__)
 # Enable CORS for Next.js local development and deployed frontend
 frontend_origins = ["http://localhost:3000", "http://localhost:3001"]
-prod_origin = os.getenv("FRONTEND_URL")
+prod_origin = os.getenv("https://federated-front.vercel.app/")
 if prod_origin:
     frontend_origins.append(prod_origin)
     frontend_origins.append(prod_origin.rstrip("/"))
